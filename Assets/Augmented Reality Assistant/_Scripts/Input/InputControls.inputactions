@@ -1,0 +1,74 @@
+{
+    "name": "InputControls",
+    "maps": [
+        {
+            "name": "AR Input",
+            "id": "0b01810a-d2f5-425b-8b4c-98c3af59e6bc",
+            "actions": [
+                {
+                    "name": "Primary Touch",
+                    "type": "Button",
+                    "id": "9214e671-3031-42a7-a497-1a6cb752f29d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Primary Touch Position",
+                    "type": "Value",
+                    "id": "511be7ea-aea0-4c31-8fd1-cd660a51c953",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "04c5bc74-66b4-48e4-9a45-1a5f207fb943",
+                    "path": "<Touchscreen>/primaryTouch/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f55b87aa-f63c-497e-adf2-6c2badd3a63e",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a682d7c-1a59-45bc-b610-c6cf98c69241",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary Touch Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c1e17176-5c10-4615-a6e6-f00e2645f086",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary Touch Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

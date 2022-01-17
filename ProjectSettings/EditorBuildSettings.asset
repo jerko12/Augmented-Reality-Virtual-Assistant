@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Augmented Reality Assistant/Scenes/AR Assistant Scene.unity
+    guid: 3ecb54167e9f34548b4512135bd7375c
+  - enabled: 1
+    path: Assets/Augmented Reality Assistant/Scenes/User Interface.unity
+    guid: ae6e63730fed3ab47bd0922a30d7b423
+  - enabled: 0
+    path: Assets/Augmented Reality Assistant/Scenes/FoLA2 Scene.unity
+    guid: 75d4592a675410b49b91ea75fb2249fe
+  m_configObjects:
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
+      type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: a8b5b3198e17f0e40bac4320ec563812,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: de8a8e4f987434338a4b1062feb8d069,
+      type: 2}
+    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: c2f7b8d7c0bff4d10874cbcf3f24af78,
+      type: 2}
+    com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: b27ec7d82a91a48e69fd689ad6808e5e,
+      type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 1eb95d77acb39444e8cf44313496a874,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 58f40b12bbc864f3c96c6505a9a1e1e3,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 86ccb0475ed3971468829754eaf6ca68,
+      type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: d552eb9166cc52443b4faeac771dfdc2,
+      type: 2}
