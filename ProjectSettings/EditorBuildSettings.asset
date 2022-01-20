@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Augmented Reality Assistant/Scenes/Main.unity
+    guid: 6717d1016cacc604bb450208c7ddda9d
+  - enabled: 1
     path: Assets/Augmented Reality Assistant/Scenes/AR Assistant Scene.unity
     guid: 3ecb54167e9f34548b4512135bd7375c
   - enabled: 1
