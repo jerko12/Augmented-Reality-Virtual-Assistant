@@ -12,6 +12,7 @@ public class HitManager : Singleton<HitManager>
 
     public void GroundChecker(ARRaycastHit arHit, RaycastHit hit)
     {
+        
         onGroundHit?.Invoke(arHit.pose.position);
     }
 

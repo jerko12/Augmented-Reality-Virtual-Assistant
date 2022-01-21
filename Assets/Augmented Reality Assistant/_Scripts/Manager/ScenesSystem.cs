@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ScenesSystem : PersistentSingleton<ScenesSystem>
 {
 
-    private void Start()
+    private async void Start()
     {
         loadSceneByName("AR Assistant Scene",LoadSceneMode.Additive);
+        await Task.Delay(25);
         loadSceneByName("User Interface", LoadSceneMode.Additive);
     }
 
