@@ -827,6 +827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3316959707755669515}
   - component: {fileID: 749530336831118551}
+  - component: {fileID: 5100265939901256331}
   m_Layer: 0
   m_Name: Rig 1
   m_TagString: Untagged
@@ -863,6 +864,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Weight: 1
   m_Effectors: []
+--- !u!114 &5100265939901256331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7280783818992454920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a326d97549548d9429bd0917037a4c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headIK:
+    MultiAimConstraints:
+    - {fileID: 5962930612025377}
+    - {fileID: 2365006176833120294}
+    - {fileID: 1550432188638647767}
+    - {fileID: 1251674722}
+    maxAngle: 45
+  avatar: {fileID: 713087559201067904}
 --- !u!1001 &713087557830595298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -924,6 +945,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -870823317777057635, guid: 49648822882b5da47b419da0a821f002,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.1418054
+      objectReference: {fileID: 0}
+    - target: {fileID: -870823317777057635, guid: 49648822882b5da47b419da0a821f002,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.16293557
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 49648822882b5da47b419da0a821f002,
         type: 3}
