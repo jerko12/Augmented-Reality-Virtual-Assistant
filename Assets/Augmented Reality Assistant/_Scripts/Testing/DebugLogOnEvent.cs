@@ -6,13 +6,13 @@ public class DebugLogOnEvent : MonoBehaviour
 {
     [SerializeField] string Text = "";
 
-    public void doDebug()
+    public static void doDebug(string txt)
     {
-        Debug.Log(Text);
+        Debug.Log(txt);
     }
 
-    public void doDebug(Vector2 value)
+    public static void doDebug(Vector2 value)
     {
-        Debug.Log(Text + " - " + value);
+        Debug.Log("Vector2 value:" + value);
     }
 }

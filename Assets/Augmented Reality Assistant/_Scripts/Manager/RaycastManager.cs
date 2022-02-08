@@ -26,10 +26,7 @@ public class RaycastManager : Singleton<RaycastManager>
         avatar
     }
 
-    private void Awake()
-    {
-
-    }
+    
 
     private void Start()
     {

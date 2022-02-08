@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DestroyOnRemoval: 1
-  m_VertexChangedThreshold: 0.01
+  m_VertexChangedThreshold: 0.05
 --- !u!114 &4850567699770404709
 MonoBehaviour:
   m_ObjectHideFlags: 0
