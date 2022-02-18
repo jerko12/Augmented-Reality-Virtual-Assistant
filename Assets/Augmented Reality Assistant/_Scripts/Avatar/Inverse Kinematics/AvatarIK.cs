@@ -38,7 +38,7 @@ public class AvatarIK : MonoBehaviour
         }
         else
         {
-            Debug.Log("Angle: " + (currentHeadAngle - headIK.maxAngle));
+            //Debug.Log("Angle: " + (currentHeadAngle - headIK.maxAngle));
             headIK.SetMultiAimWeights(headIK.GetSmoothWeight(currentHeadAngle));
             //SetMultiAimGroupWeight(headIK,getSmoothWeight(angle,headIK.minAngle,headIK.maxAngle));
         }

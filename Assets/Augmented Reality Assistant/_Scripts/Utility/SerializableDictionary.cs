@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEditor;
 using System;
 
+[System.Serializable]
 public class SerializableDictionary<TKey,TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
 {
     [SerializeField] private TKey initKey;
-    [SerializeField] private List<KeyValueClass<TKey, TValue>> _KeyValues;
+    [SerializeField] private List<KeyValueClass<TKey, TValue>> _KeyValues = new List<KeyValueClass<TKey, TValue>>();
 
     // save the dictionary to lists
     public void OnBeforeSerialize()
@@ -49,17 +50,3 @@ public class SerializableDictionary<TKey,TValue> : Dictionary<TKey, TValue>, ISe
     }
 }
 [System.Serializable] public class DictionaryOfStringAndAudioClip : SerializableDictionary<string, AudioClip> { }
-[CustomEditor(typeof(SerializableDictionary<string,AudioClip>),true)]
-[CanEditMultipleObjects]
-public class SerializableDictionaryEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-        if (GUILayout.Button("Update"))
-        {
-            SerializableDictionary<string, AudioClip> targetDict =(SerializableDictionary<string, AudioClip>)Convert.ChangeType(target, typeof(SerializableDictionary<string, AudioClip>));
-
-        }
-    }
-}

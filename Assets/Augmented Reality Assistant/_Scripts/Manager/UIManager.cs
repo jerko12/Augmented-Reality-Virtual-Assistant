@@ -2,33 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
     [SerializeField] private UI_RadialMenu RadialMenu;
     [SerializeField] private MenuOption SetAvatarPositionOption;
-    [SerializeField] private MenuOption DebugOption;
-    [SerializeField] private MenuOption Debug2Option;
+    //[SerializeField] private MenuOption DebugOption;
+    //[SerializeField] private MenuOption Debug2Option;
+
+    public Button Menu;
+
+    public Button AcceptButton;
+    public Button DenyButton;
+    public Button NextButton;
 
 
-    private static UIManager _instance;
-
-    public static UIManager Instance { get { return _instance; } }
-    private void Awake()
+    public override void Awake()
     {
-
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
-
-        DontDestroyOnLoad(gameObject);
+        base.Awake();
     }
 
+    public void showAcceptButton()
+    {
+        AcceptButton.gameObject.SetActive(true);
+    } 
+    
+    public void showDenyButton()
+    {
+        DenyButton.gameObject.SetActive(true);
+    }
+
+    public void hideButtons()
+    {
+        AcceptButton.gameObject.SetActive(false);
+        DenyButton.gameObject.SetActive(false);
+    }
 
     public void UpdateFloorActionRadialMenu(Vector2 screenPosition)
     {

@@ -16,6 +16,18 @@ public class RaycastManager : Singleton<RaycastManager>
     public UnityEvent<RaycastHit> onRaycastHit;
     public UnityEvent<ARRaycastHit> onARHit;
 
+    [Header("Normal Raycast")]
+    public UnityEvent<RaycastHit> onGroundRaycasthit;
+    public UnityEvent<RaycastHit> onAvatarRaycasthit;
+    public UnityEvent<RaycastHit> onInteractableRaycasthit;
+    [Space]
+    [Header("Raycast Settings")]
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask avatarLayer;
+    [SerializeField] LayerMask interactableLayer;
+    [SerializeField] float raycastDistance = 50;
+    [Space]
+
     public ARRaycastHit arHit;
     public RaycastHit worldHit;
 
@@ -23,22 +35,42 @@ public class RaycastManager : Singleton<RaycastManager>
     {
         air,
         ground,
-        avatar
+        avatar,
+        interactable
     }
 
     
 
     private void Start()
     {
-        InputSystem.Instance.onPrimaryPressStarted.AddListener(ARRaycastFromScreenPoint);
+        arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
+        arCam = Camera.main;
+        InputManager.Instance.onPrimaryLocationChanged.AddListener(Raycast);
         //InputManager.Instance.onPrimaryLocationChanged.AddListener();
         //InputManager.Instance.onPrimaryPressEnded.AddListener();
-        arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
+        
     }
 
-    public void RaycastFromScreenPoint(Vector2 touchScreenPosition)
+    public void Raycast(Vector2 touchPositionScreen)
     {
-        Ray ray = arCam.ScreenPointToRay(Input.GetTouch(0).position);
+        Ray ray = RaycastFromScreenPoint(touchPositionScreen);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, raycastDistance,interactableLayer))
+        {
+            onInteractableRaycasthit?.Invoke(hit);
+        }
+        if(Physics.Raycast(ray, out hit, raycastDistance, avatarLayer)){
+            onAvatarRaycasthit?.Invoke(hit);
+        }
+        if(Physics.Raycast(ray,out hit, raycastDistance, groundLayer))
+        {
+            onGroundRaycasthit?.Invoke(hit);
+        }
+    }
+
+    public Ray RaycastFromScreenPoint(Vector2 touchScreenPosition)
+    {
+        return arCam.ScreenPointToRay(touchScreenPosition);
     }
 
     public void ARRaycastFromScreenPoint(Vector2 touchScreenPosition)
@@ -51,6 +83,7 @@ public class RaycastManager : Singleton<RaycastManager>
         {
             onARHit?.Invoke(m_Hits[m_Hits.Count-1]);
             arHit = m_Hits[0];
+            
             if (hasHit)
             {
                 onARRaycastHit?.Invoke(m_Hits[m_Hits.Count - 1], hit);
@@ -58,7 +91,7 @@ public class RaycastManager : Singleton<RaycastManager>
             } 
         }
     }
-    private List<ARRaycastHit> getARHits(Vector2 pos)
+    public List<ARRaycastHit> getARHits(Vector2 pos)
     {
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
         if (m_RaycastManager.Raycast(pos, hits))

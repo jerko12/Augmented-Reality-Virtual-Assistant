@@ -20,7 +20,7 @@ public class UI_RadialMenu : MonoBehaviour
     private void Start()
     {
         SetOptions();
-        HitManager.Instance.onGroundHit.AddListener(StartMenu);
+        //HitManager.Instance.onGroundHit.AddListener(StartMenu);
         
 
     }
@@ -54,7 +54,7 @@ public class UI_RadialMenu : MonoBehaviour
     /// <param name="screenPosition">The press position on the screen.</param>
     public void StartMenu(Vector3 _worldPosition)
     {
-        startLocation = InputSystem.Instance.startPrimaryTouchPos;
+        startLocation = InputManager.Instance.startPrimaryTouchPos;
         worldPosition = _worldPosition;
 
         transform.position = new Vector3(startLocation.x, startLocation.y, 0);// Camera.main.ScreenToWorldPoint(new Vector3(screenPosition.x,screenPosition.y,10));
@@ -64,8 +64,8 @@ public class UI_RadialMenu : MonoBehaviour
             child.gameObject.SetActive(true);
         }
 
-        InputSystem.Instance.onPrimaryLocationChanged.AddListener(CheckInputDirection);
-        InputSystem.Instance.onPrimaryPressEnded.AddListener(EndMenu);
+        InputManager.Instance.onPrimaryLocationChanged.AddListener(CheckInputDirection);
+        InputManager.Instance.onPrimaryPressEnded.AddListener(EndMenu);
     }
 
 
@@ -85,8 +85,8 @@ public class UI_RadialMenu : MonoBehaviour
             child.gameObject.SetActive(false);
         }
 
-        InputSystem.Instance.onPrimaryLocationChanged.RemoveListener(CheckInputDirection);
-        InputSystem.Instance.onPrimaryPressEnded.RemoveListener(EndMenu);
+        InputManager.Instance.onPrimaryLocationChanged.RemoveListener(CheckInputDirection);
+        InputManager.Instance.onPrimaryPressEnded.RemoveListener(EndMenu);
     }
 
     /// <summary>

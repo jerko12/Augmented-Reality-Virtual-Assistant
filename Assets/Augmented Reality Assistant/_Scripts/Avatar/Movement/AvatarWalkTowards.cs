@@ -13,7 +13,7 @@ public class AvatarWalkTowards : MonoBehaviour
     }
     private void Start()
     {
-        AvatarManager.Instance.currentAvatar = this.gameObject;
+        AvatarManager.Instance.selectedAvatar = this.gameObject;
         agent = GetComponent<NavMeshAgent>();
         SetDestination(new Vector3(5, 0, 1));
     }
