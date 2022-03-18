@@ -23,7 +23,7 @@ public class Avatar : MonoBehaviour
 
     public void start()
     {
-        agent.enabled = true;
+        //agent.enabled = true;
     }
 
     public void pause()

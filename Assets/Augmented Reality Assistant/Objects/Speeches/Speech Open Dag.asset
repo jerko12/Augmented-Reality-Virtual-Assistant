@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60f949e37cbabd49a9ed6fc9bd70421, type: 3}
   m_Name: Speech Open Dag
   m_EditorClassIdentifier: 
-  speechSegment:
+  speechSegments:
   - name: Marcel
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 2b916ae4b9713bd4289720f97d134a55, type: 3}

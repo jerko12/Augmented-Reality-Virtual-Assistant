@@ -10,12 +10,19 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private MenuOption SetAvatarPositionOption;
     //[SerializeField] private MenuOption DebugOption;
     //[SerializeField] private MenuOption Debug2Option;
-
+    [Header("Main Menu Buttons")]
     public Button Menu;
 
+    [Header("Action Buttons")]
     public Button AcceptButton;
     public Button DenyButton;
     public Button NextButton;
+
+    public Button action1Button;
+    public Button action2Button;
+    public Button action3Button;
+    public Button action4Button;
+    public Button action5Button;
 
 
     public override void Awake()
@@ -38,6 +45,17 @@ public class UIManager : Singleton<UIManager>
         AcceptButton.gameObject.SetActive(false);
         DenyButton.gameObject.SetActive(false);
     }
+
+    public void showActionButton1(bool doShow)
+    {
+        action1Button.gameObject.SetActive(doShow);
+    }
+    public void showActionButton2(bool doShow)
+    {
+        action2Button.gameObject.SetActive(doShow);
+    }
+
+
 
     public void UpdateFloorActionRadialMenu(Vector2 screenPosition)
     {

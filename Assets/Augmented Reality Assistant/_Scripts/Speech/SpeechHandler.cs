@@ -10,7 +10,7 @@ public class SpeechHandler : MonoBehaviour
     public void reset()
     {
         currentIndex = 0;
-        ProgramManager.Instance.normal.onTouchEnter.AddListener(start);
+        //ProgramManager.Instance.normal.onTouchEnter.AddListener(onTouch);
     }
 
     public void speechSegmentCompleted(Avatar avatar)
@@ -22,9 +22,12 @@ public class SpeechHandler : MonoBehaviour
 
     public void next()
     {
-        
-        if (currentIndex >= currentSpeech.speechSegments.Count) return;
-        
+
+        if (currentIndex >= currentSpeech.speechSegments.Count)
+        {
+            ProgramManager.Instance.setNormal();
+            return;
+        }
         Avatar avatar;
         if(AvatarManager.Instance.currentSpawnedAvatars.TryGetValue(currentSpeech.speechSegments[currentIndex].name,out avatar))
         {
@@ -40,11 +43,15 @@ public class SpeechHandler : MonoBehaviour
         currentIndex++;
     }
 
-    public void start(Vector2 touchLocation)
+    public void onTouch(Vector2 touchLocation)
     {
-        ProgramManager.Instance.normal.onTouchEnter.RemoveListener(start);
+        ProgramManager.Instance.normal.onTouchEnter.RemoveListener(onTouch);
+        start();
+    }
 
-
+    public void start()
+    {
+        reset();
         next();
     }
 

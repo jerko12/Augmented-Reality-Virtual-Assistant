@@ -38,7 +38,12 @@ public class AvatarPlaceProgramState : ProgramState
     public override void OnGroundRayHit(RaycastHit _hit)
     {
         if (currentAvatarToPlace == null) return;
+
         currentAvatarToPlace.transform.position = _hit.point;
+
+        Vector3 lookAtLocation = new Vector3(Camera.main.transform.position.x, currentAvatarToPlace.transform.position.y, Camera.main.transform.position.z);
+        currentAvatarToPlace.transform.LookAt(lookAtLocation);
+
         base.OnGroundRayHit(_hit);
     }
 

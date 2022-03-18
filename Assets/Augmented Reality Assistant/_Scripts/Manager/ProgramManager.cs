@@ -19,6 +19,7 @@ public class ProgramManager : Singleton<ProgramManager>
 
     public NormalProgramState normal;
     public AvatarPlaceProgramState avatar_place;
+    public AvatarSpeechState avatar_speech;
 
     #region state Actions
     public void SwitchState(programState newState)
@@ -37,6 +38,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.enter();break;
             case programState.avatar_place: avatar_place.enter();break;
+            case programState.avatar_speech:avatar_speech.enter();break;
             case programState.ui_radial_menu:;break;
         }
     }
@@ -47,6 +49,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.exit(); break;
             case programState.avatar_place: avatar_place.exit(); break;
+            case programState.avatar_speech: avatar_speech.enter(); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -62,7 +65,12 @@ public class ProgramManager : Singleton<ProgramManager>
         SwitchState(programState.avatar_place);
     }
 
-    public void setOptionSelectState(int _amountOfOption)
+    public void setAvatarSpeechState()
+    {
+        SwitchState(programState.avatar_speech);
+    }
+
+    public void setOptionSelectState()
     {
 
     }
@@ -73,13 +81,14 @@ public class ProgramManager : Singleton<ProgramManager>
 
         normal.awake();
         avatar_place.awake();
-
+        avatar_speech.awake();
     }
 
     private void Start()
     {
         normal.start();
         avatar_place.start();
+        avatar_speech.start();
 
         RaycastManager.Instance.onRaycastHit.AddListener(OnRaycastHit);
         RaycastManager.Instance.onGroundRaycasthit.AddListener(OnGroundRaycastHit);
@@ -102,6 +111,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.update(); break;
             case programState.avatar_place: avatar_place.update(); break;
+            case programState.avatar_speech: avatar_speech.update(); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -112,6 +122,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.fixed_update(); break;
             case programState.avatar_place: avatar_place.fixed_update(); break;
+            case programState.avatar_speech:avatar_speech.fixed_update(); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -122,6 +133,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.late_update(); break;
             case programState.avatar_place: avatar_place.late_update(); break;
+            case programState.avatar_speech: avatar_speech.late_update(); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -134,6 +146,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.OnRayHit(_hit); break;
             case programState.avatar_place: avatar_place.OnRayHit(_hit); break;
+            case programState.avatar_speech: avatar_speech.OnRayHit(_hit); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -143,6 +156,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.OnGroundRayHit(_hit); break;
             case programState.avatar_place: avatar_place.OnGroundRayHit(_hit); break;
+            case programState.avatar_speech:avatar_speech.OnGroundRayHit(_hit); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -152,6 +166,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.OnAvatarRayHit(_hit); break;
             case programState.avatar_place: avatar_place.OnAvatarRayHit(_hit); break;
+            case programState.avatar_speech:avatar_speech.OnAvatarRayHit(_hit); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -161,6 +176,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.OnInteractableRayHit(_hit); break;
             case programState.avatar_place: avatar_place.OnInteractableRayHit(_hit); break;
+            case programState.avatar_speech:avatar_speech.OnInteractableRayHit(_hit); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -171,6 +187,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.onTouchStarted(_touchPos); break;
             case programState.avatar_place: avatar_place.onTouchStarted(_touchPos); break;
+            case programState.avatar_speech:avatar_speech.onTouchStarted(_touchPos); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -181,6 +198,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.onTouchUpdated(_touchPos); break;
             case programState.avatar_place: avatar_place.onTouchUpdated(_touchPos); break;
+            case programState.avatar_speech: avatar_speech.onTouchUpdated(_touchPos); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -191,6 +209,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.onTouchEnded(_touchPos); break;
             case programState.avatar_place: avatar_place.onTouchEnded(_touchPos); break;
+            case programState.avatar_speech: avatar_speech.onTouchEnded(_touchPos); break;
             case programState.ui_radial_menu:; break;
         }
     }
@@ -201,6 +220,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal:normal.OnAcceptButtonPress();break;
             case programState.avatar_place: avatar_place.OnAcceptButtonPress();break;
+            case programState.avatar_speech: avatar_speech.OnAcceptButtonPress();break;
         }
     }
 
@@ -210,6 +230,7 @@ public class ProgramManager : Singleton<ProgramManager>
         {
             case programState.normal: normal.OnDenyButtonPress();break;
             case programState.avatar_place: avatar_place.OnDenyButtonPress();break;
+            case programState.avatar_speech: avatar_speech.OnDenyButtonPress();break;
         }
     }
 }

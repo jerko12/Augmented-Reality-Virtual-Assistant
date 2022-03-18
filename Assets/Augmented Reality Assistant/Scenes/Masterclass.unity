@@ -153,6 +153,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &151000652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 151000654}
+  - component: {fileID: 151000653}
+  m_Layer: 0
+  m_Name: Speech  (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &151000653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151000652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e435279e31230c41a7cb98cb633dd9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSpeech: {fileID: 11400000, guid: ff0459a8be2f95043909efc915aeca64, type: 2}
+--- !u!4 &151000654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151000652}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1142760359}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &858557611
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +222,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858557611}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7b541e4d55ddf84f9b2ec0f951df8ed, type: 3}
   m_Name: 
@@ -220,6 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1142760359}
+  - component: {fileID: 1142760360}
   m_Layer: 0
   m_Name: Speeches
   m_TagString: Untagged
@@ -239,9 +284,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1186918997}
+  - {fileID: 151000654}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1142760360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142760358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd457e9ad7bfd94cabcce57934327f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speech1: {fileID: 1186918998}
+  speech2: {fileID: 151000653}
 --- !u!1 &1186918996
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,4 +345,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e435279e31230c41a7cb98cb633dd9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeech: {fileID: 11400000, guid: 6ad5b7f81a984744ebca39b2f132b4ea, type: 2}
+  currentSpeech: {fileID: 11400000, guid: 51f05013679c30241800cb555f22d6e2, type: 2}
