@@ -7,8 +7,8 @@ public class NormalProgramState : ProgramState
     public override void enter()
     {
         base.enter();
-        UIManager.Instance.showActionButton1(true);
-        UIManager.Instance.showActionButton2(true);
+        //UIManager.Instance.showActionButton1(true);
+        //UIManager.Instance.showActionButton2(true);
         Debug.Log("Normal State - enter");
     }
 

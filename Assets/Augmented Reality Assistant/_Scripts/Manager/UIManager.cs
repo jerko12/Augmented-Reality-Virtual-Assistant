@@ -8,6 +8,12 @@ public class UIManager : Singleton<UIManager>
 {
     [SerializeField] private UI_RadialMenu RadialMenu;
     [SerializeField] private MenuOption SetAvatarPositionOption;
+
+    public UnityEvent onShowToolbar;
+
+    public Dictionary<string, UI_Element> UIelements = new Dictionary<string, UI_Element>();
+    public Dictionary<string, Button> UIButtons = new Dictionary<string, Button>();
+
     //[SerializeField] private MenuOption DebugOption;
     //[SerializeField] private MenuOption Debug2Option;
     [Header("Main Menu Buttons")]
@@ -70,6 +76,29 @@ public class UIManager : Singleton<UIManager>
     public void DebugAction()
     {
 
+    }
+
+
+    public void AddUIElement(string name, UI_Element element)
+    {
+        UIelements.Add(name, element);
+    }
+
+    public void AddUIButton(string name, Button button)
+    {
+        UIButtons.Add(name, button);
+    }
+
+    public UI_Element GetUIElement(string name)
+    {
+        if (!UIelements.ContainsKey(name)) return null;
+        return UIelements[name];
+    }
+
+    public Button GetButton(string id)
+    {
+        if (!UIButtons.ContainsKey(id)) return null;
+        return UIButtons[id];
     }
 }
 

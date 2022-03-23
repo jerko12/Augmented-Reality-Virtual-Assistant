@@ -14,6 +14,7 @@ public class Avatar : MonoBehaviour
     [SerializeField] NavMeshAgent agent;
 
     public UnityEvent<Avatar> onTalkCompleted;
+    public UnityEvent onTalkComplete;
 
     public void Setup()
     {
@@ -59,6 +60,7 @@ public class Avatar : MonoBehaviour
         yield return new WaitWhile(() => voiceHandler.AudioSource.isPlaying);
         Debug.Log("Talk Completed");
         onTalkCompleted?.Invoke(this);
+        onTalkComplete?.Invoke();
     }
 
     private void Start()

@@ -10,9 +10,15 @@ public class ScenesSystem : PersistentSingleton<ScenesSystem>
     private async void Start()
     {
         loadSceneByName("AR Assistant Scene",LoadSceneMode.Additive);
-        loadSceneByName("Masterclass",LoadSceneMode.Additive);
+        loadSceneByName("Masterclass", LoadSceneMode.Additive);
+        //loadSceneByName("Masterclass",LoadSceneMode.Additive);
         await Task.Delay(25);
         //oadSceneByName("User Interface", LoadSceneMode.Additive);
+    }
+
+    public void loadFola2Scene()
+    {
+        loadSceneByName("Masterclass", LoadSceneMode.Additive);
     }
 
     /// <summary>

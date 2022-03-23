@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9f0866e591dae41a841bd3eb32fc7d, type: 3}
+  m_Name: Fola2 Choice rol kaarten
+  m_EditorClassIdentifier: 
+  buttonActions:
+  - buttonName: Fola2 Rol
+    action: {fileID: 11400000, guid: 0b5a17f3f0d178e4bad339ee2c21a304, type: 2}
+  FinishButton: Fola2 Verder
