@@ -4355,7 +4355,7 @@ MonoBehaviour:
     maxAngle: 60
     target: {fileID: 0}
   avatar: {fileID: 8904472670285661883}
-  offset: {x: 0, y: 1, z: 0}
+  offset: {x: 0, y: 1.4, z: 0}
 --- !u!114 &8807464450608588408
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -80,6 +80,11 @@ public class AvatarManager : Singleton<AvatarManager>
     }
     #endregion
 
+    public Avatar GetAvatar(string _name)
+    {
+        if (!currentSpawnedAvatars.ContainsKey(_name)) return null;
+        return currentSpawnedAvatars[_name];
+    }
 
     public void SetAvatarDestination(Vector3 destination)
     {

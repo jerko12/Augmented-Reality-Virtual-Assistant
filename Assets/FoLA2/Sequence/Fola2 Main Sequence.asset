@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2800a3b0ba6f1641a91365bbc2e8103, type: 3}
   m_Name: Fola2 Main Sequence
   m_EditorClassIdentifier: 
-  index: 3
+  index: 0
   Actions:
   - {fileID: 11400000, guid: f287c4151da8db448bad56eac42c6e25, type: 2}
   - {fileID: 11400000, guid: aec730bf665603549a1f857bd37e775b, type: 2}

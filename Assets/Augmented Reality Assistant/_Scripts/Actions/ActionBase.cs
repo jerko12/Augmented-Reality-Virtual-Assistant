@@ -11,9 +11,7 @@ public class ActionBase : ScriptableObject, IAction
 
     public virtual void Finish()
     {
-        Debug.Log("Before");
         onFinished?.Invoke();
-        Debug.Log("After");
         onFinished?.RemoveAllListeners();
     }
 

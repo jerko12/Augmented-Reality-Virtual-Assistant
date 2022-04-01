@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Augmented Reality Assistant/Scenes/AR Assistant Scene.unity
     guid: 3ecb54167e9f34548b4512135bd7375c
   - enabled: 1
-    path: Assets/Augmented Reality Assistant/Scenes/Masterclass.unity
+    path: Assets/Augmented Reality Assistant/Scenes/Fola2 Experiment.unity
     guid: 19b0d13189c4da54f9945ba305bdab57
   - enabled: 0
     path: Assets/Augmented Reality Assistant/Scenes/User Interface.unity
