@@ -19,6 +19,7 @@ public class SequenceTreeView : GraphView
         this.AddManipulator(new ContentDragger());
         this.AddManipulator(new SelectionDragger());
         this.AddManipulator(new RectangleSelector());
+        
 
         var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Graph Tree/Editor/Graph View Window/SequenceGraphWindow.uss");
         styleSheets.Add(styleSheet);

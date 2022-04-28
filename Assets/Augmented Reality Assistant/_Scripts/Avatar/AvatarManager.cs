@@ -21,13 +21,14 @@ public class AvatarManager : Singleton<AvatarManager>
 
 
     private Avatar currentToPlaceAvatar;
-    public void CreateAvatar(string _name,GameObject _character)
+    public Avatar CreateAvatar(string _name,GameObject _character)
     {
 
         Avatar spawnedAvatar = SpawnAvatar(_name, _character);
         currentSpawnedAvatars.Add(_name, spawnedAvatar);
         avatarQueue.Enqueue(spawnedAvatar);
         CheckQueue();
+        return spawnedAvatar;
     }
 
     public void CheckQueue()

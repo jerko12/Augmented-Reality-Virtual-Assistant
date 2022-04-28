@@ -7,6 +7,7 @@ public class AvatarAnimator : MonoBehaviour
 {
     [SerializeField] Animator anim;
 
+
     private void Awake()
     {
         if(anim == null) { anim.GetComponent<Animator>(); }
@@ -23,6 +24,15 @@ public class AvatarAnimator : MonoBehaviour
         anim.SetBool("Gesture", true);
         await Task.Delay(10);
         anim.SetBool("Gesture", false);
+    }
+
+    public void StartTalking()
+    {
+        anim.SetBool("Talking", true);
+    }
+     public void StopTalking()
+    {
+        anim.SetBool("Talking", false);
     }
 
 

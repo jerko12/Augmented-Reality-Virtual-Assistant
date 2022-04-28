@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f239a32b6ad4a4696c7cc60d30ae7f, type: 3}
+  m_Name: Avatar Assesment Advisor
+  m_EditorClassIdentifier: 
+  avatarName: Assessment Advisor
+  characterPrefab: {fileID: 8523744050683387846, guid: 1c63a215782108a4baabaf987cfc2671,
+    type: 3}
+  canMove: 1
+  lookAtCamera: 1

@@ -20,6 +20,7 @@ public class AvatarPlaceProgramState : ProgramState
 
     public override void exit()
     {
+        currentAvatarToPlace.onAvatarPlaced?.Invoke();
         base.exit();
         UIManager.Instance.hideButtons();
         Debug.Log("Avatar Place State - exit");

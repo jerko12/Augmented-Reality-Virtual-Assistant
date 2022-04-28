@@ -1,5 +1,5 @@
 #node-border {
-    -unity-background-image-tint-color: rgba(0, 0, 0, 255);
+    -unity-background-image-tint-color: rgb(0, 0, 0);
     background-color: rgb(60, 60, 60);
     border-left-color: rgb(34, 34, 34);
     border-right-color: rgb(34, 34, 34);
@@ -24,10 +24,10 @@
 }
 
 #selection-border {
-    border-left-color: rgba(141, 205, 231, 255);
-    border-right-color: rgba(141, 205, 231, 255);
-    border-top-color: rgba(141, 205, 231, 255);
-    border-bottom-color: rgba(141, 205, 231, 255);
+    border-left-color: rgb(141, 205, 231);
+    border-right-color: rgb(141, 205, 231);
+    border-top-color: rgb(141, 205, 231);
+    border-bottom-color: rgb(141, 205, 231);
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
@@ -77,6 +77,22 @@
     -unity-font-style: bold;
     -unity-text-align: middle-center;
     font-size: 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
 }
 
 #divider {
@@ -85,21 +101,21 @@
 }
 
 .root #input {
-    background-color: rgba(229, 111, 94, 255);
-    min-height: 25px;
+    background-color: rgb(241, 92, 92);
 }
 
 .action #input {
-    background-color: rgb(134, 191, 255);
+    background-color: rgb(97, 172, 255);
+    min-height: 3px;
 }
 
 .composite #input {
-    background-color: rgba(125, 226, 125, 255);
+    background-color: rgb(99, 231, 99);
 }
 
 .decorator #input {
-    -unity-background-image-tint-color: rgba(0, 0, 0, 255);
-    background-color: rgba(250, 224, 117, 255);
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+    background-color: rgb(245, 215, 89);
 }
 
 #node-state {
@@ -116,7 +132,7 @@
 }
 
 .running #node-state {
-    background-color: rgba(255, 231, 0, 255);
+    background-color: rgb(255, 231, 0);
 }
 
 .success #node-state {
@@ -124,5 +140,5 @@
 }
 
 .failure #node-state {
-    background-color: rgba(255, 57, 57, 255);
+    background-color: rgb(255, 57, 57);
 }

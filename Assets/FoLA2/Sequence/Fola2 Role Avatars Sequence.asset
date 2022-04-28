@@ -1,0 +1,237 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9150141570052524395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa8363e1fef04479f1f2e8b2ca367c, type: 3}
+  m_Name: AvatarCreateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: daf21917df9ff9e46b43e05a36c178e3
+  position: {x: -542, y: 261}
+  description: Create Educational Advisor
+  avatarSettings: {fileID: 11400000, guid: fae31dff658017747b8c99d202f17bbf, type: 2}
+--- !u!114 &-8625248714545950598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa8363e1fef04479f1f2e8b2ca367c, type: 3}
+  m_Name: AvatarCreateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6ce0cd6dac58103409918ce3e566eeeb
+  position: {x: 308, y: 261}
+  description: Create The Studycoach
+  avatarSettings: {fileID: 11400000, guid: 1ab99e163c123e745b33e8a0c62d1088, type: 2}
+--- !u!114 &-4785415808640248878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa8363e1fef04479f1f2e8b2ca367c, type: 3}
+  m_Name: AvatarCreateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 96c23292b14e15841ae3e13f19140376
+  position: {x: -707, y: 261}
+  description: Create Assessment Advisor
+  avatarSettings: {fileID: 11400000, guid: 0355cb172819b4b43855c07a7db3bc34, type: 2}
+--- !u!114 &-3245710531411158657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa8363e1fef04479f1f2e8b2ca367c, type: 3}
+  m_Name: AvatarCreateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b432b9acbdebcf041bd74d61b29aead7
+  position: {x: 0, y: 261}
+  description: Create The Manager
+  avatarSettings: {fileID: 11400000, guid: 5f42eecd46790604c89343e55d8d1d45, type: 2}
+--- !u!114 &-3202336064356603055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa8363e1fef04479f1f2e8b2ca367c, type: 3}
+  m_Name: AvatarCreateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1fc5bfa2bf7fecc49bae1b87659106a6
+  position: {x: 154, y: 261}
+  description: Create The Learner
+  avatarSettings: {fileID: 11400000, guid: c7a326bccc7e41f45b09d27252f1e2b9, type: 2}
+--- !u!114 &-335139002774539406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f9529a378e0ba43a825bc288a07041, type: 3}
+  m_Name: GroupNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: dc94a1a0ec0c1a8478c3d26b786ae2df
+  position: {x: 0, y: 103}
+  description: 'Add All Avatars to the
+
+    placement queue'
+  children:
+  - {fileID: -4785415808640248878}
+  - {fileID: -9150141570052524395}
+  - {fileID: 4805379279475413701}
+  - {fileID: 8487584372235430534}
+  - {fileID: -3245710531411158657}
+  - {fileID: -3202336064356603055}
+  - {fileID: -8625248714545950598}
+  - {fileID: 519814345195736180}
+  - {fileID: 4426281820462726589}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0d71b8b03365b43a6c9662366c6bde, type: 3}
+  m_Name: Fola2 Role Avatars Sequence
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 5854150581544427398}
+  treeState: 0
+  nodes:
+  - {fileID: 5854150581544427398}
+  - {fileID: -335139002774539406}
+  - {fileID: -4785415808640248878}
+  - {fileID: -9150141570052524395}
+  - {fileID: 4805379279475413701}
+  - {fileID: 519814345195736180}
+  - {fileID: -8625248714545950598}
+  - {fileID: -3245710531411158657}
+  - {fileID: 8487584372235430534}
+  - {fileID: 4426281820462726589}
+  - {fileID: -3202336064356603055}
+--- !u!114 &519814345195736180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa8363e1fef04479f1f2e8b2ca367c, type: 3}
+  m_Name: AvatarCreateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 64c750b2987af6c428706d1e65f1cebe
+  position: {x: 462, y: 261}
+  description: Create The Teacher
+  avatarSettings: {fileID: 11400000, guid: 609c379949a9c344c8b91c8b93ad61db, type: 2}
+--- !u!114 &4426281820462726589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa8363e1fef04479f1f2e8b2ca367c, type: 3}
+  m_Name: AvatarCreateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4f44dc0044c49f9498f780208a519c3b
+  position: {x: 616, y: 261}
+  description: "Create Technology \nEnhanced Learning Advisor"
+  avatarSettings: {fileID: 11400000, guid: 785f01168ce5d304c92b236fc2dcab8d, type: 2}
+--- !u!114 &4805379279475413701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa8363e1fef04479f1f2e8b2ca367c, type: 3}
+  m_Name: AvatarCreateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5c09b017a3f478648a2b755bf87ef02b
+  position: {x: -377, y: 261}
+  description: Create Instructional Designer
+  avatarSettings: {fileID: 11400000, guid: 350bcfdaba55dc94aac7922259a5338f, type: 2}
+--- !u!114 &5854150581544427398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3c1bbf04445824a80bbc0462982710, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f8ce750d945b03d4c9f281e5c5902310
+  position: {x: 0, y: 0}
+  description: Place all avatars
+  child: {fileID: -335139002774539406}
+--- !u!114 &8487584372235430534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa8363e1fef04479f1f2e8b2ca367c, type: 3}
+  m_Name: AvatarCreateNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7de3c4c124faaea47a9253d27e3dc98a
+  position: {x: -202, y: 261}
+  description: Create Learning Analytics Advisor
+  avatarSettings: {fileID: 11400000, guid: f6ddd4aa9ce106d4b82ed4d3d37ea7b8, type: 2}

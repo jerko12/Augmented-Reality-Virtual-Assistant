@@ -11,10 +11,13 @@ public class Avatar : MonoBehaviour
     [SerializeField] AvatarSpeech speech;
     [SerializeField] VoiceHandler voiceHandler;
     [SerializeField] AvatarAnimator animator;
+    [SerializeField] AvatarIK IK;
     [SerializeField] NavMeshAgent agent;
 
     public UnityEvent<Avatar> onTalkCompleted;
     public UnityEvent onTalkComplete;
+
+    public UnityEvent onAvatarPlaced;
 
     public void Setup()
     {
@@ -40,6 +43,7 @@ public class Avatar : MonoBehaviour
             voiceHandler.AudioClip = voice;
             voiceHandler.PlayAudioClip(voice);
             Debug.Log("Talk: " + voiceHandler.AudioClip.name);
+            animator.StartTalking();
             //voiceHandler.PlayCurrentAudioClip();
             StartCoroutine(waitForTalkCompleted());
         }
@@ -52,6 +56,7 @@ public class Avatar : MonoBehaviour
 
         Debug.Log("Talk: " + audioClip.name);
         voiceHandler.PlayAudioClip(audioClip);
+        animator.StartTalking();
         StartCoroutine(waitForTalkCompleted());
     }
 
@@ -59,13 +64,20 @@ public class Avatar : MonoBehaviour
     {
         yield return new WaitWhile(() => voiceHandler.AudioSource.isPlaying);
         Debug.Log("Talk Completed");
+        animator.StopTalking();
         onTalkCompleted?.Invoke(this);
         onTalkComplete?.Invoke();
+    }
+
+    public void LookAtGameobject(Transform target,Vector3 offset)
+    {
+        IK.SetHeadTarget(target,offset);
     }
 
     private void Start()
     {
         animator = GetComponentInChildren<AvatarAnimator>();
+        IK = GetComponentInChildren<AvatarIK>();
         agent = GetComponent<NavMeshAgent>();
     }
 

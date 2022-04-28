@@ -11,24 +11,44 @@ public class AvatarIK : MonoBehaviour
     [SerializeField] private GameObject avatar;
     [SerializeField] private Vector3 offset;
 
+    IKTarget target;
+
     private Camera cam;
 
     private void Start()
     {
+        GameObject targetGameObject = new GameObject("Avatar IK Target",typeof(IKTarget));
+        target = targetGameObject.GetComponent<IKTarget>();
+
         cam = Camera.main;
-        headIK.SetMultiAimTarget(cam.gameObject);
-        eyeIK.SetMultiAimTarget(cam.gameObject);
+
+        target.SetTarget(cam.transform);
+        
+        headIK.SetMultiAimTarget(target.gameObject);
+        eyeIK.SetMultiAimTarget(target.gameObject);
 
         rigBuilder.Build();
     }
 
+    /// <summary>
+    /// Set a new target gameobject for the avatar to look at.
+    /// </summary>
+    /// <param name="target">The target to look at</param>
+    public void SetHeadTarget(Transform targetTransform,Vector3 offset)
+    {
+        target.SetTarget(targetTransform);
+        target.SetOffset(offset);
 
+        eyeIK.SetMultiAimTarget(targetTransform.gameObject);
+
+        rigBuilder.Build();
+    }
 
     // Update is called once per frame
     void Update()
     {
         //WeightedTransformArray currentSources = headIK.MultiAimConstraints[0].data.sourceObjects;
-        Vector3 direction = ( cam.transform.position - (avatar.transform.position + offset)).normalized;
+        Vector3 direction = ( target.transform.position - (avatar.transform.position + offset)).normalized;
         float currentHeadAngle = Vector3.Angle(avatar.transform.forward, direction);
         
         if(currentHeadAngle < headIK.minAngle)
@@ -65,8 +85,8 @@ public class AvatarIK : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(avatar.transform.position+offset, avatar.transform.forward);
-        if (cam == null) return;
-        Gizmos.DrawLine(avatar.transform.position+offset, cam.transform.position);
+        if (target == null) return;
+        Gizmos.DrawLine(avatar.transform.position+offset, target.transform.position);
     }
 }
 [System.Serializable]
